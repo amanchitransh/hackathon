@@ -1,0 +1,131 @@
+body {
+  background-image: url("resources/bg1.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow: auto; overflow: auto;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #007DB8;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+
+.title {
+  color: #f2f2f2;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.titleWrap {
+  background-color: #007DB8;
+  color: #f2f2f2;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
+  width: 100%;
+}
+
+table{
+  width: 100%;
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.dd1{
+  width: 100%;
+  align-items: center;
+}
+
+label{
+  text-decoration: none;
+  font-size: 50px
+}
+
+select{
+  background: transparent;
+  width:50%;
+  height: 50px;
+  border-bottom: 5px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 5px;
+  color: #343232;
+}
+
+option{
+  text-decoration: none;
+  font-size: 30px;
+  color: #343232;
+}
+
+.errorPrompt{
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+}
+
+button{
+  background-color: #0073AA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+p{
+  margin: 4px 2px;
+  color: black;
+  font-size: 30px;
+}
+
+th,td{
+  margin: 4px 2px;
+  color: black;
+  font-size: 30px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+	background-color: #F2D5D7;
+
+}

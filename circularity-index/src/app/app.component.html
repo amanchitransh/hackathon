@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <title>Circularity Index</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <div class="titleWrap">
+        <span class="title">Circularity Index</span>
+      </div>
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+        <div class="container">
+          <h1>Circularity</h1>
+          <p>MCI measures how restorative the material flows of a product, which can be aggregated up to product
+            portfolio, and even further up to company level. Complementary indicators allow additional impacts and risks
+            to be taken into account.</p>
+          <br><br><br>
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="form-group">
+              <div class="dd1">
+                <label for="carModel">Car Model</label>&nbsp;&nbsp;
+                <select formControlName="carModel" class="form-control">
+                  <option>Choose Car Model</option>
+                  <option *ngFor="let web of carList">{{ web }}</option>
+                </select>
+
+                <div *ngIf="f.carModel.touched && f.carModel.invalid" class="alert alert-danger">
+                  <div class="errorPrompt" *ngIf="f.carModel.errors">Car Model is required.</div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="dd2">
+                <label for="component">Component</label>&nbsp;&nbsp;
+                <select formControlName="component" class="form-control" id="select">
+                  <option>Choose Component</option>
+                  <option *ngFor="let web of componentList">{{ web }}</option>
+                </select>
+
+                <div *ngIf="f.component.touched && f.component.invalid" class="alert alert-danger">
+                  <div class="errorPrompt" *ngIf="f.component.errors">Component is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <br>
+
+            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="componentDetails" *ngIf="visibleDiv">
+          <div class="carModel-container">
+            <h1>{{ carName }} - {{ componentName }}</h1>
+          </div>
+          <div class="table">
+            <table>
+              <tr>
+                <th>Sub-Component Name</th>
+                <th>Sub-Component Material</th>
+                <th>Sub-Component Weight</th>
+                <th>Sub-Component Circularity Index</th>
+              </tr>
+              <!-- <tr ng-repeat="x in componentData">
+              <td>{{ x.subComponentName }}</td>
+              <td>{{ x.material }}</td>
+              <td>{{ x.weight }}</td>
+              <td>{{ x.circularityIndex }}</td>
+            </tr> -->
+            </table>
+          </div>
+          <br>
+          <br>
+          <br>
+          <button mat-stroked-button color="primary" (click)="onClick()">Check Alternative Suggestions</button>
+        </div>
+        <div class="replacementSuggestion" *ngIf="visibleDiv1">
+          <div class="replacement-container">
+            <h1>{{ replacementComponentName }}</h1>
+          </div>
+          <div class="table">
+            <table>
+              <tr>
+                <th>Sub-Component Material</th>
+                <th>Sub-Component Circularity Index</th>
+              </tr>
+              <!-- <tr ng-repeat="x in componentData">
+              <td>{{ x.replacementMaterial }}</td>
+              <td>{{ x.ReplacementCircularityIndex }}</td>
+            </tr> -->
+            </table>
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
