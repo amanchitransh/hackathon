@@ -1,5 +1,5 @@
 body {
-  background-image: url("resources/bg1.jpg");
+  background-image: url("resources/bg5.jpg");
   width: 100%;
   height: 100vh;
   overflow: auto; overflow: auto;
@@ -16,11 +16,11 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
 }
 
 .topnav a:hover {
-  background-color: #007DB8;
+  background-color:  #C7B5D3;
   color: black;
 }
 
@@ -38,8 +38,8 @@ body {
 }
 
 .titleWrap {
-  background-color: #007DB8;
-  color: #f2f2f2;
+  background-color:  #C7B5D3;
+  color: #000000;
   overflow: hidden;
   text-align: center;
   text-decoration: none;
@@ -72,7 +72,7 @@ table tr:nth-child(even) {
 
 label{
   text-decoration: none;
-  font-size: 50px
+  font-size: 40px;
 }
 
 select{
@@ -126,6 +126,14 @@ th,td{
   font-size: 30px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 15px;
-	background-color: #F2D5D7;
+	background-color: #C7B5D3;
+}
 
+form{
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
 }
